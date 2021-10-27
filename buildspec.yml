@@ -3,6 +3,7 @@ version: 0.1
 phases:
   install:
     commands:
+        - sudo apt update
         - sudo apt -y --force-yes install nodejs npm
         - echo installing source NPM dependency
         - npm install
