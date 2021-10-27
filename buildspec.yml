@@ -1,12 +1,10 @@
 version: 0.2
 
 phases:
-  pre-build:
+  pre_build:
     commands:
-        # - aws codeartifact login --tool npm --domain my_domain --domain-owner 111122223333 --repository my_repo
-        - dnf module install nodejs:12
-        - echo checking node is there?
-        - node -v
+      - echo checking node is there?
+      - node -v
   build:
     commands:
       - echo Build started on `date`
