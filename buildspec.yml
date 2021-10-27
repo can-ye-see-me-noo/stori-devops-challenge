@@ -8,15 +8,16 @@ phases:
         - sudo apt install -y nodejs
         - sudo apt -y --force-yes install npm
         - echo installing source NPM dependency
-        - npm ci
-  test:
+        - npm install
+  build:
     commands:
       - echo Build started on `date`
-      - echo Compiling
+      - echo Running tests
       - npm test
-  start:
+  post_build:
     commands:
       - echo Build completed on `date`
+      - echo starting app
       - npm start
       
 artifacts:
