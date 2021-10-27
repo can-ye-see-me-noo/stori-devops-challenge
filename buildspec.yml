@@ -4,11 +4,6 @@ phases:
   install:
     commands:
         - sudo apt update
-        - node -v
-        - npm version
-        # - curl -sL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-        # - sudo apt-get install -y nodejs
-        - sudo apt -y --force-yes install npm
         - echo installing source NPM dependency
         - npm install
   build:
