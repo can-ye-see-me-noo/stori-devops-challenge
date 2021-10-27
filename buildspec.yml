@@ -4,6 +4,8 @@ phases:
   install:
     commands:
         - sudo apt update
+        - echo checking node is there?
+        - node -v
         - echo installing source NPM dependency
         - npm install
   build:
