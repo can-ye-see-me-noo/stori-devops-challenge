@@ -4,8 +4,7 @@ phases:
   install:
     commands:
         - echo installing source NPM dependency
-        - sudo yum install npm
-        - npm install
+        - npm start
   build:
     commands:
       - echo Build started on `date`
