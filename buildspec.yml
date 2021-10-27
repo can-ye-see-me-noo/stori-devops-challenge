@@ -1,16 +1,17 @@
-version: 0.1
+version: 0.2
 
 phases:
-  install:
+  pre-build:
     commands:
-        - sudo apt update
+        # - aws codeartifact login --tool npm --domain my_domain --domain-owner 111122223333 --repository my_repo
+        - dnf module install nodejs:12
         - echo checking node is there?
         - node -v
-        - echo installing source NPM dependency
-        - npm install
   build:
     commands:
       - echo Build started on `date`
+      - echo installing source NPM dependency
+      - npm install
       - echo Running tests
       - npm test
   post_build:
